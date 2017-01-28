@@ -1,5 +1,5 @@
 # Functional-Programming
-#Square-Python Funcitonal Programming
+##Square-Python
 
 ## Description
 
