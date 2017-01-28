@@ -17,6 +17,7 @@ How to Stop Micromanaging Everything](https://medium.com/javascript-scene/the-tw
 - [x] Read the [Mostly Adequate Guide to Functional Programming](https://drboolean.gitbooks.io/mostly-adequate-guide/content/) through Chapter 8: Tupperware
 - [ ] Complete the exercises in the Mostly Adequate Guide (note: there aren't exercises after each chapter - just the ones on Ch 4: Currying, Ch: 5: Coding by Composing, and Ch: 8 Tupperware).
 - [x] Practice these concepts by completing at least [5 Functional Programming exercises](https://www.codewars.com/kata/latest/my-languages?tags=Functional+Programming) on 
+
 -OR-
 
 - [ ] Refactor a previous project to use functional programming patterns (strongly recommended to review the Mostly Adequate Guide before starting) 
@@ -65,17 +66,25 @@ ________________________________________________________________________________
 https://www.codewars.com/kata/fun-with-lists-reduce
 
 Description:
+
 Implement the method reduce, which accepts three arguments:
+
 linked list (head)
 bi-function - (accumulated_value, current_element_data)
 initial value
+
 This method should return the result of applying the given function on every element with the accumulating result, starting with the initial value.
+
 For example:
+
 Given the list: 1 -> 2 -> 3, the function (acc, curr) => acc + curr and an initial value of 0, reduce should return 6, because:
+
 (0, 1) and the function (acc, curr) => acc + curr gives 1
 (1, 2) and the function (acc, curr) => acc + curr gives 3
 (3, 3) and the function (acc, curr) => acc + curr gives 6
+
 Another example:
+
 Given the list: 1 -> 2 -> 3 -> 4, the function (acc, curr) => acc * curr and an initial value of 1, reduce should return 24
 
 ## Solution
@@ -84,14 +93,14 @@ Given the list: 1 -> 2 -> 3 -> 4, the function (acc, curr) => acc * curr and an 
   var accumulated = init
   var current = head```
 
-  ```if(current === null){return f(accumulated,head)}```
+  if(current === null){return f(accumulated,head)}```
   
-  ```while(current.next !== null && current !== null) {
+  while(current.next !== null && current !== null) {
     accumulated = f(accumulated, current.data)
     current = current.next
   }```
   
- ``` if(current.next === null){
+  if(current.next === null){
     accumulated = f(accumulated, current.data)
   }```
   
