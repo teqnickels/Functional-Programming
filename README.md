@@ -101,4 +101,53 @@ Given the list: 1 -> 2 -> 3 -> 4, the function (acc, curr) => acc * curr and an 
           return accumulated
         }
 
+______________________________________________________________________________________________________________________________
+# Fun with Lists: Map
+https://www.codewars.com/kata/fun-with-lists-map
+______________________________________________________________________________________________________________________________
+
+## Description:
+
+Implement the method map, which accepts a linked list (head) and a mapping function, and returns a new linked list (head) where every element is the result of applying the given mapping method to each element of the original list.
+
+Make sure you do not modify the original list!
+
+For example: Given the list: 1 -> 2 -> 3, and the mapping function x => x * 2, map should return 2 -> 4 -> 6
+
+# Solution:
+
+    function map(head, f) {
+     if (head === null) {return}
+      return new Node(f(head.data), map(head.next, f))
+    }
+
+   ______________________________________________________________________________________________________________________________
+# Fun with Lists: Filter
+https://www.codewars.com/kata/fun-with-lists-filter
+______________________________________________________________________________________________________________________________
+
+## Description:
+
+Implement the method filter, which accepts a linked list (head) and a predicate function, and returns a new linked list (head) which only contains the elements which apply to the given predicate.
+
+For example: Given the list: 1 -> 2 -> 3, and the predicate x => x >= 2, filter should return 2 -> 3, since x >= 2 applies to both 2 and 3.
+
+## Solution
+    function filter(head, p){
+      if(head === null){
+        return
+      }
+      var current = head
+      while( current.next !== null){
+        if(p(current.data))  {
+          return new Node(current.data, filter(current.next, p))
+        }
+        current = current.next
+      }
+      if (current.next === null){
+        if(p(current.data))  {
+          return new Node(current.data, filter(current.next, p))
+        }
+      }
+
 
