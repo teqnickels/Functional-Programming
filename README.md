@@ -93,18 +93,18 @@ Given the list: 1 -> 2 -> 3 -> 4, the function (acc, curr) => acc * curr and an 
   var accumulated = init
   var current = head```
 
-  if(current === null){return f(accumulated,head)}```
+  ```if(current === null){return f(accumulated,head)}```
   
-  while(current.next !== null && current !== null) {
+ ```while(current.next !== null && current !== null) {
     accumulated = f(accumulated, current.data)
     current = current.next
   }```
   
-  if(current.next === null){
+ ``` if(current.next === null){
     accumulated = f(accumulated, current.data)
   }```
   
-  return accumulated
+ ``` return accumulated```
 }
 
 
