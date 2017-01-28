@@ -181,3 +181,15 @@ For example: Given the list: 1 -> 2 -> 3, and the predicate x => x >= 2, countIf
       return count
 
     }
+    
+______________________________________________________________________________________________________________________________ 
+# Currying functions: multiply all elements in an array
+https://www.codewars.com/kata/586909e4c66d18dd1800009b
+______________________________________________________________________________________________________________________________
+## Solution
+
+    function multiplyAll(array){
+      return function multiply_all(integer){
+        return array.map(x => x * integer)
+      }
+    }
