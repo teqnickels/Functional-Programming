@@ -60,11 +60,11 @@ CodeWars (just a heads up: you're required to answer a couple of super basic JS 
 [mit-license]: https://opensource.org/licenses/MIT
 
 ______________________________________________________________________________________________________________________________
-## Fun with Lists: Reduce
+# Fun with Lists: Reduce
 
 https://www.codewars.com/kata/fun-with-lists-reduce
 ______________________________________________________________________________________________________________________________
-# Description:
+## Description:
 
 Implement the method reduce, which accepts three arguments:
 
@@ -83,6 +83,8 @@ Given the list: 1 -> 2 -> 3, the function (acc, curr) => acc + curr and an initi
 Another example:
 
 Given the list: 1 -> 2 -> 3 -> 4, the function (acc, curr) => acc * curr and an initial value of 1, reduce should return 24
+
+## Solution:
 
 
         function reduce (head, f, init){
